@@ -4,7 +4,7 @@ store "varset" "tags" {
 }
 
 store "varset" "tokens" {
-  id       = "varset-6MNQTKstbJdHHWcq"
+  id       = "varset-kizBg7AfLmod4ZFu"
   category = "env"
 }
 
