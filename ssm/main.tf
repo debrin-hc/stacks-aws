@@ -4,6 +4,7 @@ resource "aws_ssm_parameter" "example" {
   type        = "SecureString"
   value       = "REPLACE_WITH_SECRET_VALUE"
   key_id      = "alias/aws/ssm"
+  overwrite   = true
 
   tags = var.default_tags
 }
