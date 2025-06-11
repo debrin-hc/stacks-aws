@@ -14,7 +14,7 @@ store "varset" "tokens" {
 
 deployment "dev" {
   inputs = {
-    region         = ephemeralasnull(store.varset.tokens.AWS_REGION)
+    region         = nonephemeral(store.varset.tokens.AWS_REGION)
     # identity_token = identity_token.aws.jwt
     # role_arn       = "arn:aws:iam::692859936775:role/stacks-tfc_organization-tfc_project"
     access_key    = store.varset.tokens.AWS_ACCESS_KEY_ID
