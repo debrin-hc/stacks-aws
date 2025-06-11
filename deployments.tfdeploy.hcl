@@ -1,10 +1,10 @@
-store "varset" "tags" {
-  id       = "varset-q4ixKh11RzfNgKny"
-  category = "terraform"
-}
+# store "varset" "tags" {
+#   id       = "varset-q4ixKh11RzfNgKny"
+#   category = "terraform"
+# }
 
 store "varset" "tokens" {
-  id       = "varset-kizBg7AfLmod4ZFu"
+  id       = "varset-ovEaNRDVsTCvs1KM"
   category = "env"
 }
 
@@ -14,7 +14,7 @@ store "varset" "tokens" {
 
 deployment "dev" {
   inputs = {
-    region         = "us-east-1"
+    region         = ephemeralasnull(store.varset.tokens.AWS_REGION)
     # identity_token = identity_token.aws.jwt
     # role_arn       = "arn:aws:iam::692859936775:role/stacks-tfc_organization-tfc_project"
     access_key    = store.varset.tokens.AWS_ACCESS_KEY_ID
